@@ -1,0 +1,46 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.user-inputs {
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.user-inputs input, button {
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.todo-container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 20px 15px;
+}
+
+li {
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+.cross {
+    cursor: pointer;
+}
+
