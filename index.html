@@ -22,7 +22,9 @@
                 <li v-for="(toDo,index) in toDoList" :class="{ 'line' : (toDo.done === true)}">
                     {{ toDo.text }}
                     <div class="cross">
-                        <span><i class="fa fa-times" aria-hidden="true"></i></span>
+                        <span @click="removeToDo(index)">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </span>
                     </div>
                 </li>
             </ul>

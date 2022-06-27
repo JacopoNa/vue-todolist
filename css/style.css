@@ -40,3 +40,7 @@ li {
     text-decoration: line-through;
 }
 
+.cross {
+    cursor: pointer;
+}
+
