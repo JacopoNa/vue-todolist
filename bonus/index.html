@@ -20,12 +20,16 @@
         <div class="todo-container">
             <ul>
                 <li v-for="(toDo,index) in toDoList"  :class="{ 'line' : (toDo.done === true)}">
-                    {{ toDo.text }}
+                    <span class="todo-text" @click="changeDone(index)">
+                        {{ toDo.text }}
+                    </span>
+
                     <div class="cross">
                         <span @click="removeToDo(index)">
                             <i class="fa fa-times" aria-hidden="true"></i>
                         </span>
                     </div>
+
                 </li>
             </ul>
         </div>

@@ -62,8 +62,8 @@ var app = new Vue(
                 this.toDoList.push(this.newObject);
                 this.newObject = [];
             },
-            test() {
-                alert('test')
+            changeDone(index) {
+                this.toDoList[index].done = !this.toDoList[index].done
             }
         }
     }
