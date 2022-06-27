@@ -13,8 +13,8 @@
     
     <div id="root">
         <div class="user-inputs">
-            <input type="text" placeholder="Nuovo todo">
-            <button>Aggiungi</button>
+            <input v-model="newToDo" type="text" placeholder="Nuovo todo">
+            <button @click="addNewToDo()">Aggiungi</button>
         </div>
 
         <div class="todo-container">

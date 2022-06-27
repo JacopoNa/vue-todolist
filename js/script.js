@@ -22,6 +22,12 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            // lettura nuovo to do inserito dall'utente
+            newToDo: '',
+
+            // nuovo oggetto vuoto da riempire con la proprietà text e da pushare nell'array
+            newObject: {},
+
             toDoList: [
                 {
                     text: 'Fare i compiti',
@@ -40,6 +46,13 @@ var app = new Vue(
         methods: {
             removeToDo(toDoIndex) {
                 this.toDoList.splice(toDoIndex,1)
+            },
+            addNewToDo() {
+                // aggiungo la proprietà text all'oggetto vuoto
+                this.newObject.text = this.newToDo;
+                // pusho l'oggetto nell'array iniziale
+                this.toDoList.push(this.newObject);
+                this.newObject = [];
             }
         }
     }
